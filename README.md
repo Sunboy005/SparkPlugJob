@@ -15,4 +15,4 @@ Solution to This coding Challenge- [Approovia Challenge](https://github.com/Appr
 - If it succeed it returns success boolean type with value true.
 - Else it will return success boolean value with false as it will be return as a catch error
 -For the HTML **(customerForm.html)**; I Added The Following codes at Line 117
- -*`var endpoint = `https://localhost:44321/customerform/send-message/${companyToSend}`; //change this to a valid endpoint;`*
+ -*`var endpoint = `https://localhost:44321/customerform/send-message``*
