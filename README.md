@@ -13,6 +13,6 @@ Solution to This coding Challenge- [Approovia Challenge](https://github.com/Appr
 - Then I insert the document of the mapped message into the collection using `collection.InsertOneAsync(message)`.
 - I used try and catch keywords to check if the insert method's work because it returns void so no means of keeping track of the success,
 - If it succeed it returns success boolean type with value true.
-- Else it will return success boolean value with false as it will be return as a catch error
--For the HTML **(customerForm.html)**; I Added The Following codes at Line 117
- -*`var endpoint = `https://localhost:44321/customerform/send-message``*
+- Else it will return success boolean value with false as it will be return as a catch error.
+- For the HTML **(customerForm.html)**; I Added The Following codes at Line 117
+ -*`var endpoint = 'https://localhost:44321/customerform/send-message'`*
