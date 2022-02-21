@@ -5,8 +5,8 @@ Solution to This coding Challenge- [Approovia Challenge](https://github.com/Appr
 - The model of the messageDTO sent from the HTML contains the all needed properties.
 - The WebApi recieved the payload from form which is passed through route.
 - I mapped the message comming as a DTO to the message model. 
-- Then I used `_formDomain` property from the DTO to serves as the Database name as domainName is Unique. 
-- Using mongodbClient.Get(_formDomain), I was able to check and create a new database;
+- Then I used `_formDomain` property from the DTO to serves as the Database name, as domainName is Unique. 
+- Using `mongodbClient.Get(_formDomain)`, I was able to check and create a new database;
 - Also I used `_formName` property from the DTO to serve as the Collections' name.
 - Using `database.GetCollection(_formName)`, I was able to check if it exist.
 - If no, It create a new one with `database.CreateCollectionAsync(model._formName)`.
