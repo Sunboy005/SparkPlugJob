@@ -10,6 +10,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.OpenApi.Models;
+using MongoDB.Driver;
+using Models;
+using Services.Implementation;
+using Services.Interface;
 
 namespace SparkPlugJob
 {
@@ -25,8 +30,25 @@ namespace SparkPlugJob
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddControllers();
+            //Register mongodbClient
+            services.AddSingleton<IMongoClient>(serviceProvider =>
+            {
+                var settings = Configuration.GetSection(nameof(MongoDbSettings)).Get<MongoDbSettings>();
+                return new MongoClient(settings.ConnectionString);
+            });
+            
+            //Register the service
+            services.AddScoped<IMessageService, MessageService>();
+
+            
+            services.AddCors();
 
             services.AddControllers();
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "SparkJobWebAPI", Version = "v1" });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -35,6 +57,8 @@ namespace SparkPlugJob
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseSwagger();
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "SparkJobWebAPI v1"));
             }
 
             app.UseHttpsRedirection();
@@ -42,6 +66,8 @@ namespace SparkPlugJob
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 
             app.UseEndpoints(endpoints =>
             {
