@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Yq3mV45hQllAQYeChvVlc914D/cfBye8pwcVlCRps5kdZ954oX17Tjv7Zrsh8I5I/QUivcWh7aa68N5qWFp1gw==",
+  "dgSpecHash": "n9sZWZR82FdDFIaAkyQfuVECzKvl7EZVrrD9Y2+f8+Ns/yYurSCIRfs2eQhI4Eobwhr57zifeRawg8I6mbAAvQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\hp\\Desktop\\SparkJob\\WebApi\\SparkPlugJob\\SparkPlugJob\\SparkPlugJob.csproj",
+  "projectFilePath": "C:\\Users\\hp\\Desktop\\Sparkky\\SparkplugJob\\SparkPlugJob\\SparkPlugJob.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hp\\.nuget\\packages\\dnsclient\\1.4.0\\dnsclient.1.4.0.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",

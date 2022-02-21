@@ -6,6 +6,6 @@ namespace Services.Interface
 {
     public interface IMessageService
     {
-        Task<Tuple<bool, string>> SendMessage(MessageToAddDto model, string clientId);
+        Task<Tuple<bool, string>> SendMessage(MessageToAddDto model);
     }
 }

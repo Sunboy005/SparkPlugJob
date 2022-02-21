@@ -14,15 +14,8 @@ namespace Services.Implementation
         {
             _mongoClient = mongoClient;
         }
-        public async Task<Tuple<bool, string>> SendMessage(MessageToAddDto model, string companyName)
+        public async Task<Tuple<bool, string>> SendMessage(MessageToAddDto model)
         {
-            //define the database using the company name as DBName
-            var database = _mongoClient.GetDatabase(companyName);
-            //Get the collection 
-            var collection = database.GetCollection<Message>("formMessages");
-            //If it is null, create new database
-            if (collection == null) await database.CreateCollectionAsync("formMessages");
-
             //map the MessageToSendDto to Message Model
             var message = new Message
             {
@@ -32,6 +25,12 @@ namespace Services.Implementation
                 FormName = model._formName,
                 FormDomainName = model._formDomainName
             };
+            //define the database using the company name as DBName
+            var database = _mongoClient.GetDatabase(model._formDomainName);
+            //Get the collection 
+            var collection = database.GetCollection<Message>(model._formName);
+            //If it is null, create new database
+            if (collection == null) await database.CreateCollectionAsync(model._formName);
             try
             {
                 //Insert the message to collection

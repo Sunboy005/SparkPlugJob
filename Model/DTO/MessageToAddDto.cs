@@ -15,7 +15,9 @@ namespace Models.DTO
         public  string customerEmail { get; set; }
         [Required]
         public string customerMessage { get; set; }
+        [Required]
         public string _formName { get; set; }
+        [Required]
         public string _formDomainName { get; set; }
 
     }

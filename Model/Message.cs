@@ -9,7 +9,7 @@ namespace Models
         public string Name { get; init; }
         public string Email { get; init; }
         public string MessageText { get; init; }
-        public string FormName { get; set; } = "sparkPlugFeedback";
-        public string FormDomainName { get; set; } = "localhost";
+        public string FormName { get; set; }
+        public string FormDomainName { get; set; }
     }
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hp\\Desktop\\SparkJob\\WebApi\\SparkPlugJob\\Model\\Models.csproj": {}
+    "C:\\Users\\hp\\Desktop\\Sparkky\\SparkplugJob\\Model\\Models.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hp\\Desktop\\SparkJob\\WebApi\\SparkPlugJob\\Model\\Models.csproj": {
+    "C:\\Users\\hp\\Desktop\\Sparkky\\SparkplugJob\\Model\\Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hp\\Desktop\\SparkJob\\WebApi\\SparkPlugJob\\Model\\Models.csproj",
+        "projectUniqueName": "C:\\Users\\hp\\Desktop\\Sparkky\\SparkplugJob\\Model\\Models.csproj",
         "projectName": "Models",
-        "projectPath": "C:\\Users\\hp\\Desktop\\SparkJob\\WebApi\\SparkPlugJob\\Model\\Models.csproj",
+        "projectPath": "C:\\Users\\hp\\Desktop\\Sparkky\\SparkplugJob\\Model\\Models.csproj",
         "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hp\\Desktop\\SparkJob\\WebApi\\SparkPlugJob\\Model\\obj\\",
+        "outputPath": "C:\\Users\\hp\\Desktop\\Sparkky\\SparkplugJob\\Model\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
