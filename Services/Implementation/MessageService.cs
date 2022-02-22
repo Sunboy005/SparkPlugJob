@@ -22,8 +22,7 @@ namespace Services.Implementation
                 Name = model.customerName,
                 Email = model.customerEmail,
                 MessageText = model.customerMessage,
-                FormName = model._formName,
-                FormDomainName = model._formDomainName
+                
             };
             //define the database using the company name as DBName
             var database = _mongoClient.GetDatabase(model._formDomainName);
@@ -34,7 +33,7 @@ namespace Services.Implementation
             try
             {
                 //Insert the message to collection
-                await collection.InsertOneAsync(message);
+                 await collection.InsertOneAsync(message);
                 return new Tuple<bool, string>(true, "Message Added Successfully");
             }
             catch (NullReferenceException e)
